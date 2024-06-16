@@ -14,6 +14,8 @@ class ProjectController extends Controller
     public function index()
     {
         //
+        $query = Project::query();
+        $projects = $query->paginate(10)->onEachPage(1); //Each link per page
         return inertia('Project/Index', [
 
         ]);

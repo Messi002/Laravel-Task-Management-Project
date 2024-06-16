@@ -68,3 +68,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 <!-- 1:07:07 -->
+
+4 terminals
+php artisan serve --> serve
+php artisan tinker --> tinker
+npm run dev --> vite
+            --> artisan for controllers and others
+
+
+
+
+
