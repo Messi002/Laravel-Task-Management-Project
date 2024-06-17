@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProjectResource extends JsonResource
@@ -23,7 +24,7 @@ class ProjectResource extends JsonResource
             'status' => $this->status,
             'image_path' => $this->image_path,
             'createdBy' => $this->createdBy,
-            'updatedBy' => this->updatedBy,
+            'updatedBy' => $this->updatedBy,
 
         ];
     }
