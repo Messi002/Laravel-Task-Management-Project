@@ -13,7 +13,48 @@ import TextInput from "@/Components/TextInput";
 
 
 
-const Index = ({ auth,projects }) => {
+const Index = ({ auth, projects, queryParams = null, success }) => {
+    queryParams = queryParams || {};
+    const searchFieldChanged = (name, value) => {
+      if (value) {
+        queryParams[name] = value;
+      } else {
+        delete queryParams[name];
+      }
+  
+      router.get(route("project.index"), queryParams);
+    };
+  
+    const onKeyPress = (name, e) => {
+      if (e.key !== "Enter") return;
+  
+      searchFieldChanged(name, e.target.value);
+    };
+  
+    const sortChanged = (name) => {
+      if (name === queryParams.sort_field) {
+        if (queryParams.sort_direction === "asc") {
+          queryParams.sort_direction = "desc";
+        } else {
+          queryParams.sort_direction = "asc";
+        }
+      } else {
+        queryParams.sort_field = name;
+        queryParams.sort_direction = "asc";
+      }
+      router.get(route("project.index"), queryParams);
+    };
+  
+    const deleteProject = (project) => {
+      if (!window.confirm("Are you sure you want to delete the project?")) {
+        return;
+      }
+      router.delete(route("project.destroy", project.id));
+    };
+  
+
+
+  
   return (
    <AuthenticatedLayout
    user={auth.user}
