@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Project;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,12 +16,8 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Austin Gareth',
-            'email' => 'austin@example.com',
-            'password' => bcrypt('123.321A'),
-            'email_verified_at' => time()
+            'name' => 'Test User',
+            'email' => 'test@example.com',
         ]);
-
-        Project::factory()->count(30)->hasTasks(30)->create();
     }
 }
