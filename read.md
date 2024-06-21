@@ -12,3 +12,5 @@ php artisan serve  --> serve
 npm run dev        --> react
 php artisan tinker --> tinker
                    --> artisan
+
+add mustverify to user.php
