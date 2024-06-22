@@ -14,3 +14,5 @@ php artisan tinker --> tinker
                    --> artisan
 
 add mustverify to user.php
+
+then create migration files
