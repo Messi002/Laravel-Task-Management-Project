@@ -16,3 +16,9 @@ php artisan tinker --> tinker
 add mustverify to user.php
 
 then create migration files
+then configure factories for fake data structure(how it will look like) 
+
+next database seeders
+where we now instantiate for fake data
+
+
