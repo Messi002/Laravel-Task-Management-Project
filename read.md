@@ -21,4 +21,4 @@ then configure factories for fake data structure(how it will look like)
 next database seeders
 where we now instantiate for fake data
 
-
+next project controllers
