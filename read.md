@@ -20,5 +20,9 @@ then configure factories for fake data structure(how it will look like)
 
 next database seeders
 where we now instantiate for fake data
+php artisan migrate:refresh --seed
 
 next project controllers
+php artisan make:controller ProjectController --model=Project --requests --resource
+
+modify routes
