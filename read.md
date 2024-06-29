@@ -26,3 +26,4 @@ next project controllers
 php artisan make:controller ProjectController --model=Project --requests --resource
 
 modify routes
+php artisan route:list
