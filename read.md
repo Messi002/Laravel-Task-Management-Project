@@ -1,4 +1,3 @@
-git commit --date="2023-09-06T14:30:00"
 
 
 install registration and logging functionality by Breeze
@@ -30,3 +29,7 @@ php artisan route:list
 
 next create projectresource and modify controller
 php artisan make:resource ProjectResource
+
+
+
+   
