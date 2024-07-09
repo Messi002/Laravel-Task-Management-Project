@@ -35,7 +35,9 @@ php artisan storage:link
 
 
 
-
+To check all users:
+php artisan tinker
+    \App\Models\Users::query()->paginate(5)->all()
 
 
 
